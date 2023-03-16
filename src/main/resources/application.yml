@@ -1,6 +1,17 @@
 micronaut:
   application:
     name: balanceNDiabetesApi
+datasources:
+  default:
+    url: jdbc:mysql://mysql:3306/db
+    username: user
+    password: password
+    dialect: MYSQL
+    driverClassName: com.mysql.cj.jdbc.Driver
+flyway:
+  datasources:
+    default:
+      enabled: true
 netty:
   default:
     allocator:
