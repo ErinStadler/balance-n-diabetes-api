@@ -1,4 +1,4 @@
-package example.micronaut.domain
+package com.balancendiabetes.domain
 
 import groovy.transform.CompileStatic
 import io.micronaut.data.annotation.GeneratedValue
@@ -7,26 +7,27 @@ import io.micronaut.data.annotation.MappedEntity
 import io.micronaut.serde.annotation.Serdeable
 
 import javax.validation.constraints.NotNull
+import java.time.Instant
 
 @CompileStatic
 @Serdeable
 @MappedEntity
-class User {
+class BloodSugar {
 
     @Id
     @GeneratedValue(GeneratedValue.Type.AUTO)
     Long id
 
     @NotNull
-    String username
+    Long userId
 
     @NotNull
-    String email
+    int count
 
     @NotNull
-    String password
+    Instant createdTimestamp = Instant.now()
 
     String toString() {
-        "Genre{id=$id, username='$username', email='$email'}"
+        "BloodSugar{id=$id, userId=$userId, count=$count, createdTimestamp=$createdTimestamp}"
     }
 }

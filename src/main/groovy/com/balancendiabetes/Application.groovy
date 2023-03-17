@@ -1,4 +1,4 @@
-package example.micronaut
+package com.balancendiabetes
 
 import io.micronaut.runtime.Micronaut
 import groovy.transform.CompileStatic
